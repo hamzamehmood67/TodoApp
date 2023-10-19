@@ -26,9 +26,9 @@ h1 {
     margin: 0 auto;
     background-color: #fff;
     padding: 50px;
-    box-shadow: 1px 2px 5px #31e116;
-    border: 2px solid;
-    border-color: #31e116;
+    box-shadow: px 2px 10px #31e116;
+    /* border: 2px solid;
+    border-color: #31e116; */
 }
 
 #newtask {
@@ -63,13 +63,14 @@ h1 {
 ul#tasks {
     list-style: none;
 
+
 }
 
 ul#tasks li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10px;
+    padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
     margin-bottom: 5px;
@@ -78,7 +79,7 @@ ul#tasks li {
 
 }
 
-ul#tasks li .delete {
+.delete {
     background-color: #e74c3c;
     color: #fff;
     border: none;
