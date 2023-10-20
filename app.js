@@ -21,3 +21,12 @@ btn.addEventListener('click', function () {
 
     inp.value = ""
 })
+
+//Deleting Tasks by using event Deligation
+
+tasks.addEventListener('click', function (event) {
+    if (event.target.nodeName == "BUTTON") {
+        let listItem = event.target.parentElement;
+        listItem.remove();
+    }
+})
