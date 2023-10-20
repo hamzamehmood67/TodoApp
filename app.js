@@ -5,21 +5,23 @@ let tasks = document.getElementById('tasks')
 
 
 btn.addEventListener('click', function () {
-    let item = document.createElement('li');
+    if (inp.value != "") {
+        let item = document.createElement('li');
 
-    //creating delete bitton
-    let deletebtn = document.createElement('button');
-    deletebtn.innerText = "Delete"
-    deletebtn.classList.add('delete');
-
-
-    item.innerText = inp.value;
-    item.appendChild(deletebtn);
+        //creating delete bitton
+        let deletebtn = document.createElement('button');
+        deletebtn.innerText = "Delete"
+        deletebtn.classList.add('delete');
 
 
-    tasks.appendChild(item)
+        item.innerText = inp.value;
+        item.appendChild(deletebtn);
 
-    inp.value = ""
+
+        tasks.appendChild(item)
+
+        inp.value = ""
+    }
 })
 
 //Deleting Tasks by using event Deligation
