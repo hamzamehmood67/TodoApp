@@ -3,8 +3,7 @@ let btn = document.querySelector("button");
 let tasks = document.getElementById('tasks')
 
 
-
-btn.addEventListener('click', function () {
+const addNewTask = function () {
     if (inp.value != "") {
         let item = document.createElement('li');
 
@@ -22,6 +21,11 @@ btn.addEventListener('click', function () {
 
         inp.value = ""
     }
+}
+
+
+btn.addEventListener('click', function () {
+    addNewTask();
 })
 
 //Deleting Tasks by using event Deligation
@@ -30,5 +34,13 @@ tasks.addEventListener('click', function (event) {
     if (event.target.nodeName == "BUTTON") {
         let listItem = event.target.parentElement;
         listItem.remove();
+    }
+})
+
+//If enter is press then new task will be added
+
+inp.addEventListener('keypress', function (event) {
+    if (event.key == "Enter") {
+        addNewTask();
     }
 })
